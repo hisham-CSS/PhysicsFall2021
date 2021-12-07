@@ -10,7 +10,10 @@ UCLASS()
 class PROJECT_API ACameraManager : public AActor
 {
 	GENERATED_BODY()
-		
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera Tools", meta = (AllowPrivateAccess = "true"))
+	class USceneComponent* Root;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera Tools", meta=(AllowPrivateAccess = "true"))
 	class USpringArmComponent* SpringArm;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera Tools", meta=(AllowPrivateAccess = "true"))
